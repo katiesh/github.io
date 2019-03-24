@@ -1,0 +1,40 @@
+//Import scss-files
+@import 'about-header.scss';
+@import 'about-main.scss';
+@import 'about-footer.scss';
+@import 'about-main-section.scss';
+@import 'about-sidebar.scss';
+*{
+  box-sizing: border-box;
+}
+
+$inputFontFamily: 'Montserrat', sans-serif ;
+
+body{
+  margin: 0;
+  font-family: $inputFontFamily;
+}
+
+#page{
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas: "header header header"
+                        "main main main"
+                        "main-section main-section sidebar"
+                        "footer footer footer";
+  grid-template-rows:  1fr ;
+  grid-template-columns: 1fr 55% 45%;
+ 
+  
+
+
+
+
+}
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+.advantages{
+    grid-area:advantages;
+    display: flex;
+    justify-content: space-evenly ;
+    margin-top: 30px;
+    //Nesting
+    .advantage-item{
+        display: block;
+        text-align: center;
+    }
+    .advantage-icon{
+       color: rgba(231, 230, 163, 0.562) ;
+       font-size: 122px;
+       margin-bottom: 35px;
+    }
+    .advantage-text{
+        font-weight: bold;
+    }
+}
+
+

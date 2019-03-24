@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+aside {
+  grid-area: aside;
+  height: auto;
+  padding: 10px;
+  margin: auto;
+}
+
+aside .ask-block {
+  margin-top: 50px;
+  text-align: center;
+  border: 2px solid rgba(231, 230, 163, 0.562);
+}
+
+aside .ask-block .ask-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(231, 230, 163, 0.562);
+  padding: 20px;
+}
+
+aside .ask-block .input-block {
+  padding: 0 20px 5px 20px;
+}
+
+aside .ask-block .input-block input {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  width: 300px;
+  border: 2px solid rgba(231, 230, 163, 0.562);
+  border-radius: 5000px 5000px 5000px 5000px;
+  text-indent: 15px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+aside .ask-block .button-area {
+  padding: 0 20px 10px 20px;
+}
+
+aside .ask-block .button-area .button {
+  color: #333;
+  text-decoration: none;
+  user-select: none;
+  border: 2px solid rgba(231, 230, 163, 0.562);
+  border-radius: 30px 30px 30px 30px;
+  width: 150px;
+  height: 40px;
+  background: #fff;
+  text-indent: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+aside .ask-block .button-area .button:hover {
+  background: rgba(231, 230, 163, 0.562);
+  color: #5f4d4d;
+}
+
+aside .ask-block .button-area .button:active {
+  background: rgba(231, 230, 163, 0.562);
+  color: #5f4d4d;
+}
+
+.title-text-center {
+  grid-area: title-text-center;
+  text-align: center;
+  padding: 15px;
+}
+
+.title-text-center .advantages-heading {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0 0 15px 0;
+  color: rgba(155, 154, 113, 0.562);
+}
+
+.title-text-center .advantages-descriction {
+  font-size: 18px;
+}
+
+header {
+  grid-area: header;
+  border-bottom: 1px solid rgba(231, 230, 163, 0.562);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(231, 230, 163, 0.562);
+  padding: 10px;
+  box-shadow: 1px #333;
+}
+
+header ul li {
+  float: left;
+}
+
+header ul img {
+  width: 130px;
+  height: auto;
+}
+
+header .menu {
+  padding-left: 50px;
+}
+
+header .logo {
+  padding-left: 20px;
+}
+
+header a {
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+main {
+  grid-area: main;
+  height: auto;
+  padding: 5%;
+}
+
+main h1 {
+  margin-bottom: 40px;
+  color: rgba(155, 154, 113, 0.562);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+main p {
+  font-size: 18px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgba(231, 230, 163, 0.562);
+  height: 50px;
+  padding: 15px;
+  border-bottom: 1px solid rgba(231, 230, 163, 0.562);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.advantages {
+  grid-area: advantages;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.advantages .advantage-item {
+  display: block;
+  text-align: center;
+}
+
+.advantages .advantage-icon {
+  color: rgba(231, 230, 163, 0.562);
+  font-size: 122px;
+  margin-bottom: 35px;
+}
+
+.advantages .advantage-text {
+  font-weight: bold;
+}
+
+.gallery {
+  grid-area: gallery;
+  padding: 15px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.gallery .gallery-title {
+  color: rgba(155, 154, 113, 0.562);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  max-height: 100vh;
+  margin-top: 25px;
+  padding-left: 4%;
+}
+
+.gallery .images img {
+  margin: 10px;
+  border: 1px solid rgba(231, 230, 163, 0.562);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 30px 30px 30px 30px;
+  max-width: 23vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-areas: "header header header" " main  main  aside " "title-text-center title-text-center title-text-center" "advantages advantages advantages" "gallery gallery gallery" "footer footer footer";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}

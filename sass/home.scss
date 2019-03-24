@@ -1,0 +1,41 @@
+//Import scss-files
+@import 'home-sidebar.scss';
+@import 'home-title-text-center.scss';
+@import 'home-header.scss';
+@import 'home-main-section.scss';
+@import 'footer.scss';
+@import 'home-advantages.scss';
+@import 'home-gallery.scss';
+// Variables
+$inputFontFamily: 'Montserrat', sans-serif ;
+$mainColor:rgba(231, 230, 163, 0.562) ;
+
+//Styling
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+body{
+    margin: 0;
+    font-family: $inputFontFamily;
+}
+
+#page{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-areas: "header header header"
+                         " main  main  aside "
+                         "title-text-center title-text-center title-text-center"
+                         "advantages advantages advantages"
+                         "gallery gallery gallery"
+                         "footer footer footer";
+    grid-template-rows: 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;  
+}
+
+
+
+

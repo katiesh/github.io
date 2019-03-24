@@ -1,0 +1,16 @@
+main {
+  grid-area: main;
+  height: auto;
+  padding: 5%;
+}
+
+main h1 {
+  margin-bottom: 40px;
+  color: rgba(155, 154, 113, 0.562);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+main p {
+  font-size: 18px;
+}

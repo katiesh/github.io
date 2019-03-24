@@ -1,0 +1,14 @@
+.title-text-center{
+    grid-area: title-text-center;
+    text-align: center;
+    padding: 15px;
+    .advantages-heading{
+        font-size: 32px;
+        font-weight: bold;
+        padding: 0 0 15px 0;
+        color: rgba(155, 154, 113, 0.562);
+    }
+    .advantages-descriction{
+        font-size: 18px;
+    }
+}
