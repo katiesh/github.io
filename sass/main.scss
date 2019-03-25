@@ -20,8 +20,8 @@ body{
   width: 100%;
   height: auto;
   grid-template-areas: "header header header"
-                        "main main sidebar"
-                        "main-section main-section main-section "
+                        "main main main"
+                        "main-section main-section sidebar "
                         "footer footer footer";
   grid-template-rows:  1fr ;
   grid-template-columns: 1fr 55% 45%;
