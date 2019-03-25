@@ -11,7 +11,7 @@ $inputFontFamily: 'Montserrat', sans-serif ;
       font-family: $inputFontFamily;
       width: 200px;
       border: 2px solid rgba(231, 230, 163, 0.562) ;
-      border-radius: 5000px 5000px 5000px 5000px;
+      border-radius: 30px;
       text-indent: 5px;
       outline: 0;
       height: 30px;
@@ -51,11 +51,6 @@ $inputFontFamily: 'Montserrat', sans-serif ;
     }
   }
   
-
-  
- 
-  
- 
   .calendar {
     background-color: white;
     border: 1px solid #e1e1e1;
@@ -85,21 +80,5 @@ $inputFontFamily: 'Montserrat', sans-serif ;
       grid-auto-rows: 100px;
       text-align: right;
     }
-    
-
   }
   
-  
- 
-  
-  
- 
-  
- /* .toggle__option--selected{
-    border-color: white;
-    background-color: white;
-    color: var(--red);
-    font-weight: 500;
-    box-shadow: 1px 2px 30px -5px var(--red);
-  }
- */

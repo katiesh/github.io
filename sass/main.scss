@@ -1,7 +1,7 @@
 //Import scss-files
-@import 'about-header.scss';
+@import 'header';
 @import 'about-main.scss';
-@import 'about-footer.scss';
+@import 'footer';
 @import 'about-main-section.scss';
 @import 'about-sidebar.scss';
 *{
@@ -20,8 +20,8 @@ body{
   width: 100%;
   height: auto;
   grid-template-areas: "header header header"
-                        "main main main"
-                        "main-section main-section sidebar"
+                        "main main sidebar"
+                        "main-section main-section main-section "
                         "footer footer footer";
   grid-template-rows:  1fr ;
   grid-template-columns: 1fr 55% 45%;

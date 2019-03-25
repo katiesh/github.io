@@ -1,26 +1,42 @@
 $inputFontFamily: 'Montserrat', sans-serif ;
+$mainColor:rgba(231, 230, 163, 0.562) ;
+$borderType: 2px solid;
+
+%buttonColors{
+  background: $mainColor;
+  color: rgb(95, 77, 77);
+}
+@mixin border($borderType, $borderTypeColor, $size2) {
+  border: $borderType $borderTypeColor;
+  border-radius: $size2
+}
+
+@mixin hoverActive {
+  &:hover{
+    @extend %buttonColors;
+  }
+  &:active{
+    @extend %buttonColors;
+  }
+}
 .sidebar{
     grid-area: sidebar;
     width: 40%;
     padding-left: 125px;
-   
-    
         input{
           margin-top: 15px;
           font-family: $inputFontFamily;
-          border: 2px solid rgba(231, 230, 163, 0.562) ;
-          border-radius: 5000px 5000px 5000px 5000px;
+          @include border($borderType, $mainColor, 5000px);
           text-indent: 10px;
-          outline: 0;
           height: 30px;
+          outline: none;
         }
         textarea{
           margin-top: 25px;
           font-family: $inputFontFamily;
-          border: 2px solid rgba(231, 230, 163, 0.562) ;
-          border-radius: 20px 20px 20px 20px;
+          @include border($borderType, $mainColor, 20px);
           text-indent: 15px;
-          outline: 0;
+          outline: none;
         }
         .form-send-area{
           margin-top: 25px;
@@ -28,27 +44,19 @@ $inputFontFamily: 'Montserrat', sans-serif ;
             .form-send{
               text-align: center;
               color:#333;
+              outline: none;
               text-decoration: none;
               user-select: none;
-              border: 2px solid rgba(231, 230, 163, 0.562);
-              border-radius: 30px 30px 30px 30px;
+              @include border($borderType, $mainColor, 30px);
               width: 150px;
               height: 40px;
               background: #fff;
               text-indent: 5px;
-              outline: none;
               font-family: $inputFontFamily;
               font-weight: bold;
-    }
-    .form-send:hover{
-      background: rgba(231, 230, 163, 0.562);
-      color: rgb(95, 77, 77);
-      }
-    .form-send:active{
-      background: rgba(231, 230, 163, 0.562);
-      color: rgb(95, 77, 77);
-          }
-        } 
+              @include hoverActive();
+            }
+          } 
         .slide{
         margin-top: 10px;
         margin-bottom: 10px;
@@ -60,33 +68,26 @@ $inputFontFamily: 'Montserrat', sans-serif ;
         text-align: center;
         input{
           display: none;
-        }
-        input + label{
-          display: inline-block;
-          display: inline-block;
+          }
+        input {
+        display: inline-block;
         width: 10px;
         height: 10px;
-        border-radius: 8px;
+        @include border($borderType, rgb(95, 77, 77), 8px);
         background-color: rgba(231, 230, 163, 0.562);
-        border: 2px solid rgb(95, 77, 77);
-        
-
         cursor: pointer;
-
         z-index: 100;
         position: relative;
-
         margin-right: 4px;
         top: 90%;
-
         transition: background-color 0.8s ease-out 0s;
-        }
-        input + label:hover {
+        &:hover {
           background-color: rgba(250, 250, 250, 0.8);
-      }
-      input:checked + label {
-        background-color: rgba(220, 220, 220, 0.8);
-    }
+          }
+        &:checked {
+            background-color: rgba(220, 220, 220, 0.8);
+          }
+        }
       div{
         position: absolute;
         top: 0px;
@@ -103,10 +104,10 @@ $inputFontFamily: 'Montserrat', sans-serif ;
           width:450px;
           height:300px;
         }
-        input:checked + label + div {
+        input:checked + div {
           visibility: visible;
           opacity: 1;
           transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
         }
-      }
-      }
+  }
+}
